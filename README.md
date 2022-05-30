@@ -27,3 +27,32 @@ São Paulo <br/>
 What is the name of your pet? <br/>
 Freddy <br/>
 Your band name could be São Paulo Freddy
+
+## **Day 2 Project: Tip Calculator**
+
+**Instructions:**
+
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Format the result to 2 decimal places = 33.60
+#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.
+
+**Code:**
+
+print("Welcome to the tip calculator!") <br/>
+bill = input("What was the total bill? \n") <br/>
+tip = input("How much tip would you like to give? 10, 12, or 15? \n") <br/>
+party = input("How many people to split the bill? \n") <br/>
+total_per_person = round((float(bill)/int(party))*(1+int(tip)/100) , 2) <br/>
+print(f"Each person should pay: ${total_per_person: .2f}")
+
+**Output:**
+
+Welcome to the tip calculator! <br/>
+What was the total bill? <br/>
+$150.00 <br/>
+How much tip would you like to give? 10, 12, or 15? <br/>
+12 <br/>
+How many people to split the bill? <br/>
+5 <br/>
+Each person should pay: $ 33.60
