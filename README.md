@@ -375,3 +375,39 @@ else: <br/>
 **Output:**
 
 Tails
+
+## **Day 4 Project 2: Who's Paying the Bill?**
+
+**Instructions:**
+
+You are going to write a program that will select a random name from a list of names. <br/>
+The person selected will have to pay for everybody's food bill. <br/>
+
+**Code:**
+
+import random <br/>
+names_string = input("Give me everybody's names, separated by a comma. ") <br/>
+names = names_string.split(", ") <br/>
+chosen = names[random.randint(0, len(names)-1)] <br/>
+print(f"{chosen} is going to buy the meal today!") <br/>
+
+**Output:**
+
+Give me everybody's names, separated by a comma. Angela, Ben, Jenny, Michael, Chloe <br/>
+Angela is going to buy the meal today!
+
+## **Day 4 Project 3: **
+
+**Instructions:**
+
+ <br/>
+
+**Code:**
+
+import random <br/>
+ <br/>
+
+**Output:**
+
+ <br/>
+
