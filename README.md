@@ -57,6 +57,152 @@ How many people to split the bill? <br/>
 5 <br/>
 Each person should pay: $ 33.60
 
+## **Day 3 Project 1: Odd or Even**
+
+**Instructions:**
+
+#Write a program that works out whether if a given number is an odd or even number. <br/>
+Even numbers can be divided by 2 with no remainder. <br/>
+e.g. 86 is even because 86 ÷ 2 = 43 <br/>
+43 does not have any decimal places. Therefore the division is clean. <br/>
+e.g. 59 is odd because 59 ÷ 2 = 29.5 <br/>
+29.5 is not a whole number, it has decimal places. Therefore there is a remainder of 0.5, so the division is not clean. <br/>
+
+The modulo is written as a percentage sign (%) in Python. It gives you the remainder after a division. <br/>
+
+**Code:**
+
+number = int(input("Which number do you want to check? ")) <br/>
+
+if number % 2 == 0: <br/>
+&emsp;    print("This is an even number.") <br/>
+else: <br/>
+&emsp;    print("This is an odd number.") <br/>
+
+**Output:**
+
+Which number do you want to check? 43 <br/>
+This is an odd number.
+
+## **Day 3 Project 2: BMI Calculator**
+
+**Instructions:**
+
+#Write a program that interprets the Body Mass Index (BMI) based on a user's weight and height. <br/>
+#It should tell them the interpretation of their BMI based on the BMI value. <br/>
+* Under 18.5 they are underweight <br/>
+* Over 18.5 but below 25 they have a normal weight <br/>
+* Over 25 but below 30 they are slightly overweight <br/>
+* Over 30 but below 35 they are obese <br/>
+* Above 35 they are clinically obese. <br/>
+
+#Warning you should round the result to the nearest whole number. The interpretation message needs to include the words in bold from the interpretations above. e.g. **underweight, normal weight, overweight, obese, clinically obese**.
+
+**Code:**
+
+height = float(input("enter your height in m: ")) <br/>
+weight = float(input("enter your weight in kg: ")) <br/>
+
+BMI = weight / height**2 <br/>
+
+if BMI < 18.5: <br/>
+&emsp;    print("Your BMI is " + str(f'{round(BMI, 0):.0f}') + ", you are underweight.") <br/>
+elif BMI < 25: <br/>
+&emsp;    print("Your BMI is " + str(f'{round(BMI, 0):.0f}') + ", you have a normal weight.") <br/>
+elif BMI < 30: <br/>
+&emsp;    print("Your BMI is " + str(f'{round(BMI, 0):.0f}') + ", you are slightly overweight.") <br/>
+elif BMI < 35: <br/>
+&emsp;    print("Your BMI is " + str(f'{round(BMI, 0):.0f}') + ", you are obese.") <br/>
+else: <br/>
+&emsp;    print("Your BMI is " + str(f'{round(BMI, 0):.0f}') + ", you are clinically obese.")
+
+**Output:**
+
+enter your height in m: 1.77 <br/>
+enter your weight in kg: 100 <br/>
+Your BMI is 32, you are obese. <br/>
+
+## **Day 3 Project 3: Leap Year**
+
+**Instructions:**
+
+#Write a program that works out whether if a given year is a leap year. A normal year has 365 days, leap years have 366, with an extra day in February. The reason why we have leap years is really fascinating, this video does it more justice: https://www.youtube.com/watch?v=xX96xng7sAE
+
+This is how you work out whether if a particular year is a leap year. <br/>
+* on every year that is evenly divisible by 4 
+* **except** every year that is evenly divisible by 100 
+* **unless** the year is also evenly divisible by 400
+
+**Code:**
+
+year = int(input("Which year do you want to check? ")) <br/>
+if year % 4 == 0: <br/>
+&emsp;    if year % 100 == 0: <br/>
+&emsp;&emsp;        if year % 400 == 0: <br/>
+&emsp;&emsp;&emsp;            print("Leap year.") <br/>
+&emsp;&emsp;        else: <br/>
+&emsp;&emsp;&emsp;            print("Not leap year.") <br/>
+&emsp;    else: <br/>
+&emsp;&emsp;        print("Leap year.") <br/>
+else: <br/>
+&emsp;    print("Not leap year.")
+
+**Output:**
+
+Which year do you want to check? 2000 <br/>
+Leap year. <br/>
+Which year do you want to check? 2100 <br/>
+Not leap year.
+
+## **Day 3 Project 4: Pizza Order**
+
+**Instructions:**
+
+#Congratulations, you've got a job at Python Pizza. Your first job is to build an automatic pizza order program. <br/>
+#Based on a user's order, work out their final bill. <br/>
+* Small Pizza: $15 <br/>
+* Medium Pizza: $20 <br/>
+* Large Pizza: $25 <br/>
+* Pepperoni for Small Pizza: +$2 <br/>
+* Pepperoni for Medium or Large Pizza: +$3 <br/>
+* Extra cheese for any size pizza: + $1
+
+**Code:**
+
+print("Welcome to Python Pizza Deliveries!") <br/>
+size = input("What size pizza do you want? S, M, or L \n") <br/>
+add_pepperoni = input("Do you want pepperoni? Y or N \n") <br/>
+extra_cheese = input("Do you want extra cheese? Y or N \n") <br/>
+
+if size == "S": <br/>
+&emsp;    price = 15 <br/>
+elif size == "M": <br/>
+&emsp;    price = 20 <br/>
+elif size == "L": <br/>
+&emsp;    price = 25 <br/>
+
+if add_pepperoni == "Y": <br/>
+&emsp;    if size == "S": <br/>
+&emsp;&emsp;        price += 2 <br/>
+&emsp;    else: <br/>
+&emsp;&emsp;        price += 3 <br/>
+
+if extra_cheese == "Y": <br/>
+&emsp;    price += 1
+
+print(f"Your final bill is: ${price:.0f}.")
+
+**Output:**
+
+Welcome to Python Pizza Deliveries! <br/>
+What size pizza do you want? S, M, or L <br/> 
+L <br/>
+Do you want pepperoni? Y or N <br/>
+Y <br/>
+Do you want extra cheese? Y or N <br/>
+N <br/>
+Your final bill is: $28.
+
 ## **Day 3 Project 5: Love Calculator**
 
 **Instructions:**
