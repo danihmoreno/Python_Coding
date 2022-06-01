@@ -56,3 +56,69 @@ How much tip would you like to give? 10, 12, or 15? <br/>
 How many people to split the bill? <br/>
 5 <br/>
 Each person should pay: $ 33.60
+
+## **Day 3 Project 5: Love Calculator**
+
+**Instructions:**
+
+#You are going to write a program that tests the compatibility between two people. <br/>
+#To work out the love score between two people: <br/>
+* Take both people's names and check for the number of times the letters in the word TRUE occurs. <br/>
+* Then check for the number of times the letters in the word LOVE occurs. <br/>
+* Then combine these numbers to make a 2 digit number. <br/>
+
+For Love Scores less than 10 or greater than 90, the message should be: <br/>
+"Your score is **x**, you go together like coke and mentos." <br/>
+
+For Love Scores between 40 and 50, the message should be: <br/>
+"Your score is **y**, you are alright together." <br/>
+
+Otherwise, the message will just be their score. e.g.: <br/>
+"Your score is **z**." <br/>
+
+e.g. <br/>
+name1 = "Angela Yu" <br/>
+name2 = "Jack Bauer" <br/>
+T occurs 0 times <br/>
+R occurs 1 time <br/>
+U occurs 2 times <br/>
+E occurs 2 times <br/>
+Total = 5 <br/>
+L occurs 1 time <br/>
+O occurs 0 times <br/>
+V occurs 0 times <br/>
+E occurs 2 times <br/>
+Total = 3 <br/>
+Love Score = 53 <br/>
+Print: "Your score is 53."
+
+**Code:**
+
+print("Welcome to the Love Calculator!") <br/>
+name1 = input("What is your name? \n") <br/>
+name2 = input("What is their name? \n") <br/>
+full_name = name1 + name2 <br/>
+t = full_name.lower().count("t") <br/>
+r = full_name.lower().count("r") <br/>
+u = full_name.lower().count("u") <br/>
+e = full_name.lower().count("e") <br/>
+l = full_name.lower().count("l") <br/>
+o = full_name.lower().count("o") <br/>
+v = full_name.lower().count("v") <br/>
+e = full_name.lower().count("e") <br/>
+score = (t+r+u+e)*10 + (l+o+v+e) <br/>
+if score < 10 or score > 90: <br/>
+&emsp;    print(f"Your score is {score:.0f}, you go together like coke and mentos.") <br/>
+elif score >= 40 and score <= 50: <br/>
+&emsp;    print(f"Your score is {score:.0f}, you are alright together.") <br/>
+else: <br/>
+&emsp;    print(f"Your score is {score:.0f}.")
+
+**Output:**
+
+Welcome to the Love Calculator! <br/>
+What is your name?  <br/>
+Kanye West <br/>
+What is their name? <br/> 
+Kim Kardashian <br/>
+Your score is 42, you are alright together.
