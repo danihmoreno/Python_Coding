@@ -354,3 +354,24 @@ wait <br/>
 You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?  <br/>
 red <br/>
 It's a room full of fire. Game Over. <br/>
+
+## **Day 4 Project 1: Heads or Tails**
+
+**Instructions:**
+
+You are going to write a virtual coin toss program. It will randomly tell the user "Heads" or "Tails". <br/>
+There are many ways of doing this. But you should generate a random number, either 0 or 1. Then use that number to print out Heads or Tails. <br/>
+e.g. 1 means Heads 0 means Tails
+
+**Code:**
+
+import random <br/>
+random_side = random.randint(0, 1) <br/>
+if random_side == 0: <br/>
+&emsp;    print("Tails") <br/>
+else: <br/>
+&emsp;    print("Heads") <br/>
+
+**Output:**
+
+Tails
