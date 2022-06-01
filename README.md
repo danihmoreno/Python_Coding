@@ -382,6 +382,7 @@ Tails
 
 You are going to write a program that will select a random name from a list of names. <br/>
 The person selected will have to pay for everybody's food bill. <br/>
+*Important*: You are not allowed to use the choice() function.
 
 **Code:**
 
@@ -396,18 +397,36 @@ print(f"{chosen} is going to buy the meal today!") <br/>
 Give me everybody's names, separated by a comma. Angela, Ben, Jenny, Michael, Chloe <br/>
 Angela is going to buy the meal today!
 
-## **Day 4 Project 3: **
+## **Day 4 Project 3: Treasure Map Game**
 
 **Instructions:**
 
- <br/>
+You are going to write a program that will mark a spot with an X. <br/>
+Your job is to write a program that allows you to mark a square on the map using a two-digit system. <br/>
+The first digit is the vertical column number and the second digit is the horizontal row number. <br/>
+First, your program must take the user input and convert it to a usable format. <br/>
+Next, you need to use it to update your nested list with an "x".
 
 **Code:**
 
-import random <br/>
- <br/>
+row1 = ["⬜️","⬜️","⬜️"] <br/>
+row2 = ["⬜️","⬜️","⬜️"] <br/>
+row3 = ["⬜️","⬜️","⬜️"] <br/>
+map = [row1, row2, row3] <br/>
+print(f"{row1}\n{row2}\n{row3}") <br/>
+position = input("Where do you want to put the treasure? ") <br/>
+
+map[int(position[1]) - 1][int(position[0]) - 1] = "x" <br/>
+
+print(f"{row1}\n{row2}\n{row3}") <br/>
 
 **Output:**
 
- <br/>
+['⬜️', '⬜️', '⬜️'] <br/>
+['⬜️', '⬜️', '⬜️'] <br/>
+['⬜️', '⬜️', '⬜️'] <br/>
+Where do you want to put the treasure? 32 <br/>
+['⬜️', '⬜️', '⬜️'] <br/>
+['⬜️', '⬜️', 'x'] <br/>
+['⬜️', '⬜️', '⬜️'] <br/>
 
