@@ -268,3 +268,89 @@ Kanye West <br/>
 What is their name? <br/> 
 Kim Kardashian <br/>
 Your score is 42, you are alright together.
+
+## **Day 3 Final Project: Treasure Island Game**
+
+**Instructions:**
+
+#Make your own "Choose Your Own Adventure" game. Use conditionals such as if, else, and elif statements to lay out the logic and the story's path in your program. <br/>
+Have a think about how you might write your program to make a player's answers less case-sensitive. In other words, your code should work regardless of whether your user answers "left" or "Left". <br/>
+You can also add your own ASCII art. Just remember to add three single quotes ''' at the start and at the end of your artwork to turn it into a multi-line string. <br/>
+
+**Code:**
+
+print(''' <br/>
+******************************************************************************* <br/>
+          |                   |                  |                     | <br/>
+ _________|________________.=""_;=.______________|_____________________|_______ <br/>
+|                   |  ,-"_,=""     `"=.|                  | <br/>
+|___________________|__"=._o`"-._        `"=.______________|___________________ <br/>
+          |                `"=._o`"=._      _`"=._                     | <br/>
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______ <br/>
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   | <br/>
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________ <br/>
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              | <br/>
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______ <br/>
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   | <br/>
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________ <br/>
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____ <br/>
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_ <br/>
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____ <br/>
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_ <br/>
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____ <br/>
+/______/______/______/______/______/______/______/______/______/______/_____ / <br/>
+******************************************************************************* <br/>
+''') <br/>
+print("Welcome to Treasure Island.") <br/>
+print("Your mission is to find the treasure.") <br/>
+
+choice1 = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower() <br/>
+if choice1 == "left": <br/>
+&emsp;  choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower() <br/>
+&emsp;  if choice2 == "wait": <br/>
+&emsp;&emsp;    choice3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n").lower() <br/>
+&emsp;&emsp;    if choice3 == "red": <br/>
+&emsp;&emsp;&emsp;      print("It's a room full of fire. Game Over.") <br/>
+&emsp;&emsp;    elif choice3 == "yellow": <br/>
+&emsp;&emsp;&emsp;      print("You found the treasure! You Win!") <br/>
+&emsp;&emsp;    elif choice3 == "blue": <br/>
+&emsp;&emsp;&emsp;      print("You enter a room of beasts. Game Over.") <br/>
+&emsp;&emsp;    else: <br/>
+&emsp;&emsp;&emsp;      print("You chose a door that doesn't exist. Game Over.") <br/>
+&emsp;  else: <br/>
+&emsp;&emsp;    print("You get attacked by an angry trout. Game Over.") <br/>
+else: <br/>
+&emsp;  print("You fell into a hole. Game Over.") <br/>
+
+**Output:**
+
+******************************************************************************* <br/>
+          |                   |                  |                     | <br/>
+ _________|________________.=""_;=.______________|_____________________|_______ <br/>
+|                   |  ,-"_,=""     `"=.|                  | <br/>
+|___________________|__"=._o`"-._        `"=.______________|___________________ <br/>
+          |                `"=._o`"=._      _`"=._                     | <br/>
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______ <br/>
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   | <br/>
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________ <br/>
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              | <br/>
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______ <br/>
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   | <br/>
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________ <br/>
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____ <br/>
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_ <br/>
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____ <br/>
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_ <br/>
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____ <br/>
+/______/______/______/______/______/______/______/______/______/______/_____ / <br/>
+******************************************************************************* <br/>
+
+Welcome to Treasure Island. <br/>
+Your mission is to find the treasure. <br/>
+You're at a cross road. Where do you want to go? Type "left" or "right"  <br/>
+left <br/>
+You've come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across.  <br/>
+wait <br/>
+You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?  <br/>
+red <br/>
+It's a room full of fire. Game Over. <br/>
