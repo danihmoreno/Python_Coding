@@ -498,7 +498,7 @@ You win! <br/>
 **Instructions:**
 
 You are going to write a program that calculates the average student height, rounded to the nearest whole number, from a List of heights. <br/>
-Important You should not use the sum() or len() functions in your answer. <br/>
+*Important* You should not use the sum() or len() functions in your answer. <br/>
 You should try to replicate their functionality using what you have learnt about for loops. <br/>
 
 **Code:**
@@ -522,3 +522,32 @@ print(f"The average student height is {average_height:.0f}") <br/>
 Input a list of student heights: <br/>
 156 178 165 171 187 <br/>
 The average student height is 171 <br/>
+
+## **Day 5 Project 2: High Score**
+
+**Instructions:**
+
+You are going to write a program that calculates the highest score from a List of scores. <br/>
+*Important* you are not allowed to use the max or min functions. <br/>
+Think about the logic before writing code. How can you compare numbers against each other to see which one is larger? <br/>
+
+**Code:**
+
+student_scores = input("Input a list of student scores: ").split() <br/>
+for n in range(0, len(student_scores)): <br/>
+&emsp;  student_scores[n] = int(student_scores[n]) <br/>
+print(student_scores) <br/>
+
+high_score = 0 <br/>
+
+for score in student_scores: <br/>
+&emsp;    if score > high_score: <br/>
+&emsp;&emsp;        high_score = score <br/>
+
+print(f"The highest score in the class is: {high_score}") <br/>
+
+**Output:**
+
+Input a list of student scores: 78 65 89 86 55 91 64 89 <br/>
+[78, 65, 89, 86, 55, 91, 64, 89] <br/>
+The highest score in the class is: 91 <br/>
