@@ -478,8 +478,8 @@ else: <br/>
 &emsp;&emsp;    print("You win!") <br/>
 &emsp;  elif int(player) == int(computer): <br/>
 &emsp;&emsp;    print("It's a draw") <br/>
-&emsp;  else: <br/> <br/>
-&emsp;&emsp;    print("You lose!") <br/> <br/>
+&emsp;  else: <br/>
+&emsp;&emsp;    print("You lose!") <br/>
 
 **Output:**
 
