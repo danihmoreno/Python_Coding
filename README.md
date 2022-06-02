@@ -551,3 +551,24 @@ print(f"The highest score in the class is: {high_score}") <br/>
 Input a list of student scores: 78 65 89 86 55 91 64 89 <br/>
 [78, 65, 89, 86, 55, 91, 64, 89] <br/>
 The highest score in the class is: 91 <br/>
+
+## **Day 5 Project 3: Adding Even Numbers**
+
+**Instructions:**
+
+You are going to write a program that calculates the sum of all the even numbers from 1 to 100. <br/>
+Thus, the first even number would be 2 and the last one is 100: <br/>
+i.e. 2 + 4 + 6 + 8 +10 ... + 98 + 100 <br/>
+*Important*, there should only be 1 print statement in your console output. It should just print the final total and not every step of the calculation. <br/>
+
+**Code:**
+
+total = 0 <br/>
+for number in range(2, 101, 2): <br/>
+&emsp;    total += number <br/>
+print(total) <br/>
+
+**Output:**
+
+2550 <br/>
+
