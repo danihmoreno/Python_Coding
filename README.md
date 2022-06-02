@@ -492,3 +492,33 @@ Computer chose  <br/>
 ✌️ <br/>
 
 You win! <br/>
+
+## **Day 5 Project 1: Average Height**
+
+**Instructions:**
+
+You are going to write a program that calculates the average student height, rounded to the nearest whole number, from a List of heights. <br/>
+Important You should not use the sum() or len() functions in your answer. <br/>
+You should try to replicate their functionality using what you have learnt about for loops. <br/>
+
+**Code:**
+
+student_heights = input("Input a list of student heights:  \n").split() <br/>
+for n in range(0, len(student_heights)): <br/>
+&emsp;  student_heights[n] = int(student_heights[n]) <br/>
+  
+sum_heights = 0 <br/>
+students = 0 <br/>
+for height in student_heights: <br/>
+&emsp;    sum_heights += height <br/>
+&emsp;    students += 1 <br/>
+
+average_height = round(sum_heights / students , 0) <br/>
+
+print(f"The average student height is {average_height:.0f}") <br/>
+
+**Output:**
+
+Input a list of student heights: <br/>
+156 178 165 171 187 <br/>
+The average student height is 171 <br/>
