@@ -465,19 +465,21 @@ player = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scisso
 computer = random.randint(0, 2) <br/>
 options = [rock, paper, scissors] <br/>
 
-print(f"You chose {options[int(player)]}") <br/>
-print(f"Computer chose {options[int(computer)]}") <br/>
-
-if int(player) == 0 and int(computer) == 2: <br/>
-&emsp;  print("You win!") <br/>
-elif int(player) == 1 and int(computer) == 0: <br/>
-&emsp;  print("You win!") <br/>
-elif int(player) == 2 and int(computer) == 1: <br/>
-&emsp;  print("You win!") <br/>
-elif int(player) == int(computer): <br/>
-&emsp;  print("It's a draw") <br/>
+if not 0 <= int(player) <= 2: <br/>
+&emsp;  print("You typed an invalid number. Try again!") <br/>
 else: <br/>
-&emsp;  print("You lose!") <br/>
+&emsp;  print(f"You chose {options[int(player)]}") <br/>
+&emsp;  print(f"Computer chose {options[int(computer)]}") <br/>
+&emsp;  if int(player) == 0 and int(computer) == 2: <br/>
+&emsp;&emsp;    print("You win!") <br/>
+&emsp;  elif int(player) == 1 and int(computer) == 0: <br/>
+&emsp;&emsp;    print("You win!") <br/>
+&emsp;  elif int(player) == 2 and int(computer) == 1: <br/>
+&emsp;&emsp;    print("You win!") <br/>
+&emsp;  elif int(player) == int(computer): <br/>
+&emsp;&emsp;    print("It's a draw") <br/>
+&emsp;  else: <br/> <br/>
+&emsp;&emsp;    print("You lose!") <br/> <br/>
 
 **Output:**
 
