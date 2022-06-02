@@ -430,3 +430,63 @@ Where do you want to put the treasure? 32 <br/>
 ['⬜️', '⬜️', 'x'] <br/>
 ['⬜️', '⬜️', '⬜️'] <br/>
 
+## **Day 4 Final Project: Rock, Paper, Scissors**
+
+**Instructions:**
+
+Make a rock, paper, scissors game. <br/>
+
+Start the game by asking the player: <br/>
+"What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors." <br/>
+
+From there you will need to figure out:
+* How you will store the user's input.
+* How you will generate a random choice for the computer.
+* How you will compare the user's and the computer's choice to determine the winner (or a draw).
+* And also how you will give feedback to the player.
+
+**Code:**
+
+rock = ''' <br/>
+✊ <br/>
+''' <br/>
+
+paper = ''' <br/>
+✋ <br/>
+''' <br/>
+
+scissors = ''' <br/>
+✌️ <br/>
+''' <br/>
+
+import random <br/>
+
+player = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n") <br/>
+computer = random.randint(0, 2) <br/>
+options = [rock, paper, scissors] <br/>
+
+print(f"You chose {options[int(player)]}") <br/>
+print(f"Computer chose {options[int(computer)]}") <br/>
+
+if int(player) == 0 and int(computer) == 2: <br/>
+&emsp;  print("You win!") <br/>
+elif int(player) == 1 and int(computer) == 0: <br/>
+&emsp;  print("You win!") <br/>
+elif int(player) == 2 and int(computer) == 1: <br/>
+&emsp;  print("You win!") <br/>
+elif int(player) == int(computer): <br/>
+&emsp;  print("It's a draw") <br/>
+else: <br/>
+&emsp;  print("You lose!") <br/>
+
+**Output:**
+
+What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.  <br/>
+0 <br/>
+You chose <br/>
+✊ <br/>
+
+Computer chose  <br/>
+✌️ <br/>
+
+You win! <br/>
