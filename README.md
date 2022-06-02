@@ -572,3 +572,127 @@ print(total) <br/>
 
 2550 <br/>
 
+## **Day 5 Project 4: FizzBuzz**
+
+**Instructions:**
+
+You are going to write a program that automatically prints the solution to the FizzBuzz game. <br/>
+Your program should print each number from 1 to 100 in turn. <br/>
+* When the number is divisible by 3 then instead of printing the number it should print "Fizz".
+* When the number is divisible by 5, then instead of printing the number it should print "Buzz".
+* And if the number is divisible by both 3 and 5 e.g. 15 then instead of the number it should print "FizzBuzz"
+
+**Code:**
+
+for i in range(1, 101): <br/>
+&emsp;    if i % 15 == 0: <br/>
+&emsp;&emsp;        print("FizzBuzz") <br/>
+&emsp;    elif i % 3 == 0: <br/>
+&emsp;&emsp;        print("Fizz") <br/>
+&emsp;    elif i % 5 == 0: <br/>
+&emsp;&emsp;        print("Buzz") <br/>
+&emsp;    else: <br/>
+&emsp;&emsp;        print(i) <br/>
+
+**Output:**
+
+1 <br/>
+2 <br/>
+Fizz <br/>
+4 <br/>
+Buzz <br/>
+Fizz <br/>
+7 <br/>
+8 <br/>
+Fizz <br/>
+Buzz <br/>
+11 <br/>
+Fizz <br/>
+13 <br/>
+14 <br/>
+FizzBuzz <br/>
+16 <br/>
+17 <br/>
+Fizz <br/>
+19 <br/>
+Buzz <br/>
+Fizz <br/>
+22 <br/>
+23 <br/>
+Fizz <br/>
+Buzz <br/>
+26 <br/>
+Fizz <br/>
+28 <br/>
+29 <br/>
+FizzBuzz <br/>
+31 <br/>
+32 <br/>
+Fizz <br/>
+34 <br/>
+Buzz <br/>
+Fizz <br/>
+37 <br/>
+38 <br/>
+Fizz <br/>
+Buzz <br/>
+41 <br/>
+Fizz <br/>
+43 <br/>
+44 <br/>
+FizzBuzz <br/>
+46 <br/>
+47 <br/>
+Fizz <br/>
+49 <br/>
+Buzz <br/>
+Fizz <br/>
+52 <br/>
+53 <br/>
+Fizz <br/>
+Buzz <br/>
+56 <br/>
+Fizz <br/>
+58 <br/>
+59 <br/>
+FizzBuzz <br/>
+61 <br/>
+62 <br/>
+Fizz <br/>
+64 <br/>
+Buzz <br/>
+Fizz <br/>
+67 <br/>
+68 <br/>
+Fizz <br/>
+Buzz <br/>
+71 <br/>
+Fizz <br/>
+73 <br/>
+74 <br/>
+FizzBuzz <br/>
+76 <br/>
+77 <br/>
+Fizz <br/>
+79 <br/>
+Buzz <br/>
+Fizz <br/>
+82 <br/>
+83 <br/>
+Fizz <br/>
+Buzz <br/>
+86 <br/>
+Fizz <br/>
+88 <br/>
+89 <br/>
+FizzBuzz <br/>
+91 <br/>
+92 <br/>
+Fizz <br/>
+94 <br/>
+Buzz <br/>
+Fizz <br/>
+97 <br/>
+98 <br/>
+Fizz <br/>
+Buzz <br/>
