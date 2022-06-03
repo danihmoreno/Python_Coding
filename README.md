@@ -696,3 +696,61 @@ Fizz <br/>
 98 <br/>
 Fizz <br/>
 Buzz <br/>
+
+## **Day 5 Final Project: Safe Password Generator**
+
+**Instructions:**
+
+You are going to write a program that generates a random password based on how many characters the user wishes to have of the following types:
+* Lowercase Letters: a-z
+* Capital Letters: A-Z
+* Numbers: 0-9
+* Symbols: !, #, $, %, &, (, ), *, +
+
+**Code:**
+
+import random <br/>
+
+lowercase_letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'] <br/>
+capital_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] <br/>
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] <br/>
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+'] <br/>
+
+print("Welcome to the PyPassword Generator! \n") <br/>
+nr_lowercase_letters = int(input("How many lowercase letters would you like in your password?\n")) <br/>
+nr_capital_letters = int(input("How many capital letters would you like in your password?\n")) <br/>
+nr_symbols = int(input(f"How many symbols would you like?\n")) <br/>
+nr_numbers = int(input(f"How many numbers would you like?\n")) <br/>
+
+character_types = [lowercase_letters, capital_letters, numbers, symbols] <br/>
+
+if not 1 <= nr_lowercase_letters <= 5 or not 1 <= nr_capital_letters <= 5 or not 1 <= nr_symbols <= 5 or not 1 <= nr_numbers <= 5: <br/>
+&emsp;  print("\nPlease chose between 1 and 5 for each character type! \n") <br/>
+else: <br/>
+&emsp;  total_characters = nr_lowercase_letters + nr_capital_letters + nr_symbols + nr_numbers <br/>
+  
+&emsp;  password = "" <br/>
+  
+&emsp;  for password_character in range(1, total_characters + 1): <br/>
+&emsp;&emsp;    type = random.randint(0, 3) <br/>
+&emsp;&emsp;    character_position = random.randint(0, len(character_types[type]) - 1) <br/>
+&emsp;&emsp;    character = character_types[type][character_position] <br/>
+&emsp;&emsp;    password = password + character <br/>
+  
+&emsp;  print(f"\nYour password is:\n{password}") <br/>
+
+**Output:**
+
+Welcome to the PyPassword Generator! <br/>
+
+How many lowercase letters would you like in your password? <br/>
+5 <br/>
+How many capital letters would you like in your password? <br/>
+4 <br/>
+How many symbols would you like? <br/>
+3 <br/>
+How many numbers would you like? <br/>
+2 <br/>
+
+Your password is: <br/>
+i+M%98Wwwub+LS <br/>
