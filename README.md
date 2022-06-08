@@ -754,3 +754,80 @@ How many numbers would you like? <br/>
 
 Your password is: <br/>
 i+M%98Wwwub+LS <br/>
+
+## **Day 7 Final Project: Hangman**
+
+**Instructions:**
+
+You are going to write a program that replicates the game Hangman
+
+**Code:**
+
+import random <br/>
+from hangman_words import word_list <br/>
+from hangman_art import logo <br/>
+
+chosen_word = random.choice(word_list) <br/>
+word_length = len(chosen_word) <br/>
+end_of_game = False <br/>
+lives = 6 <br/>
+print(logo) <br/>
+
+display = [] <br/>
+for _ in range(word_length): <br/>
+&emsp;    display += "_" <br/>
+
+guess_list = [] <br/>
+while not end_of_game: <br/>
+&emsp;    guess = input("Guess a letter: ").lower() <br/>
+&emsp;    if guess == "answer": <br/>
+&emsp;&emsp;      print(f'Pssst, the solution is: "{chosen_word}".') <br/>
+&emsp;    else: <br/>
+&emsp;&emsp;      if guess in display: <br/>
+&emsp;&emsp;&emsp;          print(f"You've already guessed {guess}") <br/>
+&emsp;&emsp;      for position in range(word_length): <br/>
+&emsp;&emsp;&emsp;          letter = chosen_word[position] <br/>
+&emsp;&emsp;&emsp;          if letter == guess: <br/>
+&emsp;&emsp;&emsp;&emsp;              display[position] = letter <br/>
+&emsp;&emsp;      if guess in guess_list: <br/>
+&emsp;&emsp;&emsp;        print(f"'{guess}' was already guessed!") <br/>
+&emsp;&emsp;      else: <br/>
+&emsp;&emsp;&emsp;        guess_list.append(guess) <br/>
+&emsp;&emsp;      if guess not in chosen_word: <br/>
+&emsp;&emsp;&emsp;          print(f"You guessed {guess}, that's not in the word. You lose a life.") <br/>
+&emsp;&emsp;&emsp;          lives -= 1 <br/>
+&emsp;&emsp;&emsp;          if lives == 0: <br/>
+&emsp;&emsp;&emsp;&emsp;              end_of_game = True <br/>
+&emsp;&emsp;&emsp;&emsp;              print("You lose.") <br/>
+&emsp;&emsp;      print(f"{' '.join(display)}") <br/>
+&emsp;&emsp;      print(f"Guesses: {guess_list}") <br/>
+&emsp;&emsp;      if "_" not in display: <br/>
+&emsp;&emsp;&emsp;          end_of_game = True <br/>
+&emsp;&emsp;&emsp;          print("You win.") <br/>
+&emsp;&emsp;      from hangman_art import stages <br/>
+&emsp;&emsp;      print(stages[lives]) <br/>
+
+**Output:**
+
+ _                                              <br/>
+| |                                             <br/>
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __   <br/>
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \  <br/>
+| | | | (_| | | | | (_| | | | | | | (_| | | | | <br/>
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_| <br/>
+                    __/ |                       <br/>
+                   |___/                        <br/>
+
+Guess a letter: m <br/>
+a x i o m <br/>
+Guesses: ['a', 'e', 'i', 'o', 'u', 'd', 'n', 'l', 'x', 'm'] <br/>
+You win. <br/>
+
+  +---+ <br/>
+  |   | <br/>
+  O   | <br/>
+ /|\  | <br/>
+ /    | <br/>
+      | <br/>
+========= <br/>
+
